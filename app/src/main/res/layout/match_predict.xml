@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/back"
+    android:paddingHorizontal="20dp"
+    >
+<TextView
+    android:layout_marginTop="180dp"
+    android:textAlignment="center"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="승부를 예측하고 포인트를 얻어 \n 보상을 노리세요"
+    android:textColor="#000"
+    android:textSize="20dp"
+    android:textStyle="bold"
+    android:background="#fff"
+    />
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="축구 16강 \n 전자공학과 VS 소프트웨어공학과"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="#848484"
+        />
+
+    <TextView
+        android:layout_marginTop="70dp"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="장소 : 대운동장 \n 시간 : 오후 3시 30분"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="#d8d8d8"
+        />
+
+
+
+    <View
+        android:layout_weight="0.85"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#ff0000"
+        android:text="승리 예측"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#0000ff"
+        android:text="패배 예측"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#ffff00"
+        android:text="해당 장소 카카오맵 열기"
+        android:textColor="#000"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
