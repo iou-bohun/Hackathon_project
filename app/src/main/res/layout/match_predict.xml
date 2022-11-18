@@ -84,7 +84,7 @@
 
 
     <Button
-        android:id="@+id/player1_win_predict"
+        android:id="@+id/player1_win_btn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:backgroundTint="#ff0000"
@@ -94,7 +94,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/player2_win_predict"
+        android:id="@+id/player2_win_btn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:backgroundTint="#0000ff"

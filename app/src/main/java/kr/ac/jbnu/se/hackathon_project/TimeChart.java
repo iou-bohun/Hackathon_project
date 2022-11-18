@@ -61,8 +61,6 @@ public class TimeChart extends AppCompatActivity {
                     String place = dataSnapshot.child("place").getValue(String.class);
                     String time = dataSnapshot.child("time").getValue(String.class);
 
-                    Toast.makeText(TimeChart.this, event, Toast.LENGTH_SHORT).show();
-
                     listViewAdapter.add(event, player1, player2, place, time);
                 }
 
