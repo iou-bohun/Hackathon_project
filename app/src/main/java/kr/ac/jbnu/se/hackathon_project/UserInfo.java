@@ -5,13 +5,17 @@ public class UserInfo {
     private String password;
     private String name;
     private String department;
+    private int score;
+    public boolean ismanager;
 
-    public UserInfo(String student_Number, String password, String name, String department)
+    public UserInfo(String student_Number, String password, String name, String department, int score, boolean ismanager)
     {
         this.student_Number = student_Number;
         this.password = password;
         this.name = name;
         this.department = department;
+        this.score = score;
+        this.ismanager = ismanager;
     }
 
     public UserInfo(){}
@@ -48,6 +52,12 @@ public class UserInfo {
         this.student_Number = student_Number;
     }
 
+    public int getScore(){return score;}
 
+    public  void  setScore(int score){this.score = score;}
+
+    public void setManager(boolean ismanager){this.ismanager = ismanager;}
+
+    public boolean getIsmanager(){return ismanager;}
 
 }
