@@ -18,8 +18,11 @@ public class UserInfo {
         this.ismanager = ismanager;
     }
 
-    public UserInfo(){}
 
+
+    public UserInfo(){
+
+    }
     public String getDepartment() {
         return department;
     }

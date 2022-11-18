@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private static boolean isManager;
     EditText edt_SignInStudentNumber;
     EditText edt_SignInPassword;
     Button btn_login;
@@ -29,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-
+        isManager = false;
         edt_SignInStudentNumber = (EditText) findViewById(R.id.edt_SignUpStudentNumber);
         edt_SignInPassword = (EditText) findViewById(R.id.edt_SignUpPassword);
         btn_login = (Button) findViewById(R.id.btn_SignIn);
@@ -53,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                         {
                             mDialog.dismiss();
                             UserInfo user = snapshot.child(edt_SignInStudentNumber.getText().toString()).getValue(UserInfo.class);
-
+                            isManager = user.getIsmanager();
                             if(user.getPassword().equals(edt_SignInPassword.getText().toString()))
                             {
 
@@ -94,5 +95,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-
+    public static boolean getIsManager(){
+        return isManager;
+    }
 }

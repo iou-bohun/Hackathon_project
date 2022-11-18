@@ -23,6 +23,7 @@
         <activity android:name=".TimeChart"/>
 
         <activity android:name=".Match_Predict"/>
+        <activity android:name=".ManagerActivity"/>
     </application>
 
 </manifest>

@@ -23,7 +23,7 @@ import com.google.firebase.firestore.auth.User;
 public class TimeChart extends AppCompatActivity {
 
     private ListViewAdapter listViewAdapter;
-    private UserInfo userInfo;
+    public UserInfo userInfo;
     ListView listView;
     FirebaseDatabase db;
     DatabaseReference myRef;
@@ -42,17 +42,18 @@ public class TimeChart extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if(userInfo.getIsmanager()==false){
+                Intent intent;
+                if(LoginActivity.getIsManager()){
+                    Toast.makeText(TimeChart.this,"dd",Toast.LENGTH_LONG).show();
+                    intent = new Intent(TimeChart.this, ManagerActivity.class);
+                    startActivity(intent);
+                }
+                else{
                     Toast.makeText(TimeChart.this,"ss",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(TimeChart.this, Match_Predict.class);
+                    intent = new Intent(TimeChart.this, Match_Predict.class);
                     MatchData matchData = listViewAdapter.getItem(i);
                     intent.putExtra("matchData", matchData);
                     startActivity(intent);
-                }
-                else if(userInfo.getIsmanager() ==true){
-                    Toast.makeText(TimeChart.this,"dd",Toast.LENGTH_LONG).show();
-                    Intent intent1 = new Intent(TimeChart.this, ManagerActivity.class);
-                    startActivity(intent1);
                 }
 
             }
@@ -77,6 +78,7 @@ public class TimeChart extends AppCompatActivity {
 
                 listViewAdapter.notifyDataSetChanged();
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
