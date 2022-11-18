@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:text="@string/departmentRank"
             android:layout_marginRight="30dp"
-            android:id="@+id/departmentRank"
+            android:id="@+id/txtV_departmentRank"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/individualRank"
-            android:id="@+id/individualRank"
+            android:id="@+id/txtV_individualRank"
             />
 
 
@@ -68,7 +68,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/soccer"
-                    android:id="@+id/soccerBtn"
+                    android:id="@+id/btn_soccer"
                     />
 
             </LinearLayout>
@@ -83,7 +83,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/basketball"
-                    android:id="@+id/basketballBtn"
+                    android:id="@+id/btn_basketball"
                     />
 
             </LinearLayout>
@@ -98,7 +98,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/footvolleyball"
-                    android:id="@+id/footvolleyballBtn"
+                    android:id="@+id/btn_footvolleyball"
                     />
 
             </LinearLayout>
@@ -113,7 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/dodgeball"
-                    android:id="@+id/dodgeballBtn"
+                    android:id="@+id/btn_dodgeball"
                     />
 
             </LinearLayout>
@@ -128,7 +128,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/relay"
-                    android:id="@+id/relayBtn"
+                    android:id="@+id/btn_relay"
                     />
 
             </LinearLayout>
@@ -142,7 +142,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/tugofwar"
-                    android:id="@+id/tugofwarBtn"
+                    android:id="@+id/btn_tugofwar"
                     />
 
             </LinearLayout>
@@ -156,7 +156,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/wrestling"
-                    android:id="@+id/wrestlingBtn"
+                    android:id="@+id/btn_wrestling"
                     />
 
             </LinearLayout>
@@ -170,7 +170,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/armwrestling"
-                    android:id="@+id/armwrestlingBtn"
+                    android:id="@+id/btn_armwrestling"
                     />
 
             </LinearLayout>
@@ -185,7 +185,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/penaltyshootout"
-                    android:id="@+id/penaltyshootoutBtn"
+                    android:id="@+id/btn_penaltyshootout"
                     />
 
             </LinearLayout>
