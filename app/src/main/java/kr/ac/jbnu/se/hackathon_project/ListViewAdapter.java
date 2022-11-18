@@ -28,7 +28,7 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int i) {
+    public MatchData getItem(int i) {
         return MatchDataList.get(i);
     }
 
