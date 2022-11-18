@@ -1,41 +1,76 @@
 package kr.ac.jbnu.se.hackathon_project;
 
+import static android.content.ContentValues.TAG;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayList<HashMap<String, String>> Data = new ArrayList<HashMap<String,String>>();
-    private HashMap<String,String> input1 = new HashMap<>();
-    private HashMap<String,String> input2 = new HashMap<>();
-    private HashMap<String,String> input3 = new HashMap<>();
+    private ListViewAdapter listViewAdapter;
+    ListView listView;
+    FirebaseDatabase db;
+    DatabaseReference myRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.timechart);
 
-        ListView listView = findViewById(R.id.listView);
+        listViewAdapter = new ListViewAdapter();
+        listView = findViewById(R.id.listView);
 
-        input1.put("match", "축구: 소프트웨어 vs 전기공학");
-        input1.put("time", "몇분 남음");
-        Data.add(input1);
+        listView.setAdapter(listViewAdapter);
 
-        input2.put("match", "배구: 소프트웨어 vs 전자공학");
-        input2.put("time", "몇분 남음");
-        Data.add(input2);
+        db = FirebaseDatabase.getInstance();
+        myRef = db.getReference().child("Match");
 
-        input3.put("match", "농구: 소프트웨어 vs 신소재공학");
-        input3.put("time", "몇분 남음");
-        Data.add(input3);
+        getValue();
+    }
 
-        SimpleAdapter simpleAdapter = new SimpleAdapter(this,Data,android.R.layout.simple_list_item_2,new String[]{"match","time"},new int[]{android.R.id.text1,android.R.id.text2});
-        listView.setAdapter(simpleAdapter);
+    private void getValue(){
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    String event = dataSnapshot.child("event").getValue(String.class);
+                    String player1 = dataSnapshot.child("player1").getValue(String.class);
+                    String player2 = dataSnapshot.child("player2").getValue(String.class);
+                    String place = dataSnapshot.child("place").getValue(String.class);
+                    String time = dataSnapshot.child("time").getValue(String.class);
+
+                    Toast.makeText(MainActivity.this, event, Toast.LENGTH_SHORT).show();
+
+                    listViewAdapter.add(event, player1, player2, place, time);
+                }
+
+                listViewAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }
