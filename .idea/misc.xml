@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/82107/AndroidStudioProjects/Hackathon_Project/app/src/main/res/drawable/edttext.xml" value="0.1" />
         <entry key="..\:/Users/82107/AndroidStudioProjects/Hackathon_Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.146" />
+        <entry key="..\:/Users/82107/AndroidStudioProjects/Hackathon_Project/app/src/main/res/layout/login.xml" value="0.1" />
+        <entry key="..\:/Users/82107/AndroidStudioProjects/Hackathon_Project/app/src/main/res/layout/main.xml" value="0.109375" />
         <entry key="..\:/Users/82107/AndroidStudioProjects/Hackathon_Project/app/src/main/res/layout/match_predict.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/82107/AndroidStudioProjects/Hackathon_Project/app/src/main/res/layout/signup.xml" value="0.221875" />
       </map>
     </option>
   </component>
