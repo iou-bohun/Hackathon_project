@@ -30,10 +30,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        edt_SignInStudentNumber = (EditText) findViewById(R.id.studentId);
-        edt_SignInPassword = (EditText) findViewById(R.id.password);
-        btn_login = (Button) findViewById(R.id.login);
-        btn_join = (Button) findViewById(R.id.join);
+        edt_SignInStudentNumber = (EditText) findViewById(R.id.edt_SignUpStudentNumber);
+        edt_SignInPassword = (EditText) findViewById(R.id.edt_SignUpPassword);
+        btn_login = (Button) findViewById(R.id.btn_SignIn);
+        btn_join = (Button) findViewById(R.id.btn_join);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference table_user = database.getReference("User");
