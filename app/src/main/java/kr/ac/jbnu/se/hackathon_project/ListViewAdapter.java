@@ -20,6 +20,7 @@ public class ListViewAdapter extends BaseAdapter {
     private TextView place;
     private TextView time;
 
+    
     private ArrayList<MatchData> MatchDataList = new ArrayList<MatchData>();
 
     @Override
