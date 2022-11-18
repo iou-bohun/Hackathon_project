@@ -13,6 +13,9 @@ public class UserInfo {
         this.name = name;
         this.department = department;
     }
+
+    public UserInfo(){}
+
     public String getDepartment() {
         return department;
     }

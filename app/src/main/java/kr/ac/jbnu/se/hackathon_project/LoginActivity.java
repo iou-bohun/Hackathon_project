@@ -56,8 +56,9 @@ public class LoginActivity extends AppCompatActivity {
 
                             if(user.getPassword().equals(edt_SignInPassword.getText().toString()))
                             {
+
                                 Intent homeIntent = new Intent(LoginActivity.this, MainActivity.class);
-                                //?
+
                                 startActivity(homeIntent);
                                 finish();
                             }
