@@ -15,25 +15,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/departmentRankingString"
+            android:text="@string/individualScoreString"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/departmentRank"
-            android:layout_marginRight="30dp"
-            android:id="@+id/txtV_departmentRank"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/individualRankingString"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/individualRank"
-            android:id="@+id/txtV_individualRank"
+            android:text="@string/individualScore"
+            android:id="@+id/txtV_individualScore"
             />
 
 

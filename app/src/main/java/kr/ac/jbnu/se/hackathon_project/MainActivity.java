@@ -12,12 +12,14 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     Button soccer, basketball, footvolleyball, dodgeball, relay, tugofwar, wrestling, armwrestling, penaltyshootout;
-    TextView departmentRank, individualRank;
+    TextView individualScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+
 
         soccer = findViewById(R.id.btn_soccer);
         basketball = findViewById(R.id.btn_basketball);
@@ -29,8 +31,7 @@ public class MainActivity extends AppCompatActivity {
         armwrestling = findViewById(R.id.btn_armwrestling);
         penaltyshootout = findViewById(R.id.btn_penaltyshootout);
 
-        departmentRank = findViewById(R.id.txtV_departmentRank);
-        individualRank = findViewById(R.id.txtV_individualRank);
+        individualScore = findViewById(R.id.txtV_individualScore);
 
         soccer.setOnClickListener(v->{
             Intent intent = new Intent(this, TimeChart.class);
